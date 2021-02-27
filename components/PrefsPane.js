@@ -75,29 +75,26 @@ export default function PrefsPane() {
   const onClose = () => setPrefsOpen(false)
   const open = () => setPrefsOpen(true)
 
-  const prefsProps = {
-    colors,
-    onApply,
-    onClose
-  }
-
-  const growPaneProps = {
-    height: '170px',
-    expand: prefsOpen
-  }
-
-  const groBtnProps = {
-    ariaLabel: 'Open Prefs',
-    id: 'openPrefs',
-    onClick: open
-  }
-
   return (
-    <GroPane {...growPaneProps}>
+    <GroPane
+      height="170px"
+      expand={prefsOpen}
+    >
       {prefsOpen ? (
-        <Prefs {...prefsProps} />
+        <Prefs
+          colors={colors}
+          onApply={onApply}
+          onClose={onClose}
+        />
       ) : (
-        <GroBtn {...groBtnProps}> OPEN PREFS </GroBtn>
+        <GroBtn
+          ariaLabel="Open Prefs"
+          id="openPrefs"
+          onClick={open}
+        >
+          {' '}
+          OPEN PREFS{' '}
+        </GroBtn>
       )}
     </GroPane>
   )
@@ -121,57 +118,61 @@ function Prefs(props) {
   const setColorsFor = (key) => (e) =>
     setColors({ ...colors, [key]: e.target.value })
 
-  const baseInputProps = {
-    id: 'base',
-    value: colors.base,
-    onChange: setColorsFor('base')
-  }
-
-  const accentInputProps = {
-    id: 'accent',
-    value: colors.accent,
-    onChange: setColorsFor('accent')
-  }
-
-  const textDefaultInputProps = {
-    id: 'textDefault',
-    value: colors.textDefault,
-    onChange: setColorsFor('textDefault')
-  }
-
-  const applyBtnProps = {
-    ariaLabel: 'Apply Prefs',
-    id: 'applyPrefs',
-    onClick: apply
-  }
-
-  const closeBtnProps = {
-    ariaLabel: 'Close Prefs',
-    id: 'closePrefs',
-    onClick: close
-  }
-  const randBtnProps = {
-    ariaLabel: 'Randomize Colors',
-    id: 'randPrefs',
-    onClick: rand
-  }
-
-  const rowBoxProps = {
-    justifyContent: 'space-between'
-  }
-
   return (
     <>
-      <Label htmlFor="base"> BASE COLOR </Label>
-      <InputField {...baseInputProps} />
-      <Label htmlFor="accent"> ACCENT COLOR </Label>
-      <InputField {...accentInputProps} />
-      <Label htmlFor="textDefault"> TEXT COLOR </Label>
-      <InputField {...textDefaultInputProps} />
-      <RowBox {...rowBoxProps}>
-        <GroBtn {...applyBtnProps}>APPLY</GroBtn>
-        <GroBtn {...randBtnProps}> ?? </GroBtn>
-        <GroBtn {...closeBtnProps}>CLOSE</GroBtn>
+      <Label
+        htmlFor="base"
+      > BASE COLOR </Label>
+      <InputField
+        id="base"
+        value={colors.base}
+        onChange={setColorsFor('base')}
+      />
+      <Label
+        htmlFor="accent"
+      > ACCENT COLOR </Label>
+      <InputField
+        id="accent"
+        value={colors.accent}
+        onChange={setColorsFor('accent')}
+      />
+      <Label
+        htmlFor="textDefault"
+      > TEXT COLOR </Label>
+      <InputField
+        id="textDefault"
+        value={colors.textDefault}
+        onChange={setColorsFor('textDefault')}
+      />
+      <RowBox
+        justifyContent="space-between"
+      >
+        <GroBtn
+          ariaLabel="Apply Prefs"
+          id="applyPrefs"
+          onClick={apply}
+        >
+          APPLY
+        </GroBtn>
+        <GroBtn
+          ariaLabel="Randomize Colors"
+          id="randPrefs"
+          onClick={rand}
+        >
+          <span
+            role="img"
+            aria-label="random color theme"
+          >
+            🎲
+          </span>
+        </GroBtn>
+        <GroBtn
+          ariaLabel="Close Prefs"
+          id="closePrefs"
+          onClick={close}
+        >
+          CLOSE
+        </GroBtn>
       </RowBox>
     </>
   )

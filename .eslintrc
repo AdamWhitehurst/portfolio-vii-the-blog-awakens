@@ -4,14 +4,20 @@
     "jest": true,
     "es6": true
   },
-  "plugins": ["prettier"],
-  "extends": ["nextjs", "plugin:prettier/recommended"],
   "parserOptions": {
     "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "sourceType": "module"
   },
+  "extends": ["prettier", "react-app"],
+  "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"
+    "react/jsx-first-prop-new-line": ["error", "always"],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
+    "react/jsx-indent-props": [2, 2],
+    "react/jsx-closing-bracket-location": [2, "tag-aligned"]
   },
   "settings": {
     "import/resolver": {
