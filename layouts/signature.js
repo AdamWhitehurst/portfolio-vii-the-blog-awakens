@@ -7,6 +7,21 @@ export default styled(SVG)`
   top: 0;
   height: 70px;
   z-index: -99;
+  /* animation: fade 12s linear infinite; */
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+
+    85% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
 
   & path {
     fill: none;
@@ -14,12 +29,10 @@ export default styled(SVG)`
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 4;
-    stroke-opacity: 50%;
     stroke: var(--accent);
     stroke-dasharray: 2575;
     stroke-dashoffset: 2575;
-    animation: draw 20s linear infinite;
-    animation-timing-function: linear;
+    animation: draw 12s linear forwards;
   }
 
   @keyframes draw {
@@ -39,7 +52,8 @@ export default styled(SVG)`
       stroke-dashoffset: 0;
     }
     100% {
-      stroke-dashoffset: -2575;
+      /* stroke-dashoffset: -2575; */
+      stroke-dashoffset: 0;
     }
   }
 `

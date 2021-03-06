@@ -5,6 +5,7 @@ export default styled.header`
   flex-direction: row;
   ${({ reverse }) => (reverse ? 'flex-direction: row-reverse;' : null)}
   align-items: flex-end;
-  min-height: 60px;
-  padding-bottom: 1.25rem;
+  justify-content: center;
+  min-height: 40px;
+  margin-bottom: 0.5rem;
 `

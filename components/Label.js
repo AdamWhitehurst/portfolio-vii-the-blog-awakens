@@ -5,7 +5,7 @@ export default styled.label`
   white-space: nowrap;
   color: var(--accent);
   opacity: 1;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.4rem;
-  font-weight: 700;
+  font-weight: 300;
 `

@@ -1,11 +1,17 @@
 // REF: https://nextjs.org/docs/advanced-features/custom-app
 // import App from 'next/app'
+import Signature from '@layouts/signature'
 import './_app.css'
 
 function MyApp({ Component, pageProps }) {
-  return <Component
-    {...pageProps}
-         />
+  return (
+    <>
+      <Signature />
+      <Component
+        {...pageProps}
+      />
+    </>
+  )
 }
 
 // Only uncomment this method if you have blocking data requirements for

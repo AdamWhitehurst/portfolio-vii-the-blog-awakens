@@ -5,6 +5,7 @@ import Label from '@components/Label'
 import RowBox from '@components/RowBox'
 import usePersistentState from '@hooks/usePersistentState'
 import toSlugCase from '@lib/toSlugCase'
+import { dequal } from 'dequal'
 import React, { useEffect, useState } from 'react'
 
 const defaultColors = {
@@ -109,8 +110,13 @@ function Prefs(props) {
   }
 
   const rand = () => {
-    const randIdx = Math.floor(Math.random() * randomColors.length)
-    const newColors = { ...colors, ...randomColors[randIdx] }
+    // Find a new theme that is not the same as
+    // the current one
+    let newColors = colors
+    while (dequal(newColors, colors)) {
+      const randIdx = Math.floor(Math.random() * randomColors.length)
+      newColors = { ...colors, ...randomColors[randIdx] }
+    }
     setColors(newColors)
     onApply(newColors)
   }

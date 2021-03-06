@@ -11,13 +11,14 @@
     },
     "sourceType": "module"
   },
-  "extends": ["prettier", "react-app"],
+  "extends": ["prettier", "react-app", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "rules": {
-    "react/jsx-first-prop-new-line": ["error", "always"],
-    "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
-    "react/jsx-indent-props": [2, 2],
-    "react/jsx-closing-bracket-location": [2, "tag-aligned"]
+    // "react/jsx-first-prop-new-line": ["error", "always"],
+    // "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
+    // "react/jsx-indent-props": [2, 2],
+    "react/jsx-closing-bracket-location": [2, "tag-aligned"],
+    "indent": ["error", 2]
   },
   "settings": {
     "import/resolver": {

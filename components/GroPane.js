@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export default styled.div`
   overflow: hidden;
@@ -8,7 +8,9 @@ export default styled.div`
   height: ${({ expand, height = '132px' }) => (expand ? height : '30px')};
   ${({ expand }) =>
     expand &&
-    `& button {
-          padding-left: 0;
-        }`}
+    css`
+      & button {
+        padding-left: 0;
+      }
+    `}
 `

@@ -1,3 +1,4 @@
+import SEO from '@components/SEO'
 import SidebarLayout from '@layouts/sidebar-layout'
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div
       className="container"
     >
+      <SEO />
       <SidebarLayout />
     </div>
   )

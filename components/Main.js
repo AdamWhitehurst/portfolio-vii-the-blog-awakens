@@ -1,3 +1,4 @@
 import styled from 'styled-components'
 
-export default styled.main``
+export default styled.main`
+`

@@ -77,7 +77,6 @@ html {
 body {
   background-color: var(--base);
   margin: 0;
-  line-height: 1.4rem;
   font-family: Manrope, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-default);
