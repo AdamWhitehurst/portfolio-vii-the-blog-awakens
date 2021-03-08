@@ -1,12 +1,25 @@
+import BtnBar from '@components/BtnBar'
+import BtnWrapper from '@components/BtnWrapper'
 import GroBtn from '@components/GroBtn'
 import GroPane from '@components/GroPane'
 import InputField from '@components/InputField'
 import Label from '@components/Label'
-import RowBox from '@components/RowBox'
 import usePersistentState from '@hooks/usePersistentState'
 import toSlugCase from '@lib/toSlugCase'
 import { dequal } from 'dequal'
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
+
+const ModalPanel = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 50%;
+  background-color: var(--base);
+  z-index: 10;
+  padding: 1rem;
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.75);
+`
 
 const defaultColors = {
   accent: '#DAA52088',
@@ -77,27 +90,14 @@ export default function PrefsPane() {
   const open = () => setPrefsOpen(true)
 
   return (
-    <GroPane
-      height="170px"
-      expand={prefsOpen}
-    >
+    <>
       {prefsOpen ? (
-        <Prefs
-          colors={colors}
-          onApply={onApply}
-          onClose={onClose}
-        />
-      ) : (
-        <GroBtn
-          ariaLabel="Open Prefs"
-          id="openPrefs"
-          onClick={open}
-        >
-          {' '}
-          OPEN PREFS{' '}
-        </GroBtn>
-      )}
-    </GroPane>
+        <Prefs colors={colors} onApply={onApply} onClose={onClose} />
+      ) : null}
+      <GroBtn ariaLabel="Open Prefs" id="openPrefs" onClick={open}>
+        PREFS
+      </GroBtn>
+    </>
   )
 }
 
@@ -125,61 +125,42 @@ function Prefs(props) {
     setColors({ ...colors, [key]: e.target.value })
 
   return (
-    <>
-      <Label
-        htmlFor="base"
-      > BASE COLOR </Label>
-      <InputField
-        id="base"
-        value={colors.base}
-        onChange={setColorsFor('base')}
-      />
-      <Label
-        htmlFor="accent"
-      > ACCENT COLOR </Label>
-      <InputField
-        id="accent"
-        value={colors.accent}
-        onChange={setColorsFor('accent')}
-      />
-      <Label
-        htmlFor="textDefault"
-      > TEXT COLOR </Label>
-      <InputField
-        id="textDefault"
-        value={colors.textDefault}
-        onChange={setColorsFor('textDefault')}
-      />
-      <RowBox
-        justifyContent="space-between"
-      >
-        <GroBtn
-          ariaLabel="Apply Prefs"
-          id="applyPrefs"
-          onClick={apply}
-        >
-          APPLY
-        </GroBtn>
-        <GroBtn
-          ariaLabel="Randomize Colors"
-          id="randPrefs"
-          onClick={rand}
-        >
-          <span
-            role="img"
-            aria-label="random color theme"
-          >
-            🎲
-          </span>
-        </GroBtn>
-        <GroBtn
-          ariaLabel="Close Prefs"
-          id="closePrefs"
-          onClick={close}
-        >
-          CLOSE
-        </GroBtn>
-      </RowBox>
-    </>
+    <ModalPanel>
+      <GroPane height="170px" expand>
+        <Label htmlFor="base"> BASE COLOR </Label>
+        <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
+        <Label htmlFor="accent"> ACCENT COLOR </Label>
+        <InputField
+          id="accent"
+          value={colors.accent}
+          onChange={setColorsFor('accent')}
+        />
+        <Label htmlFor="textDefault"> TEXT COLOR </Label>
+        <InputField
+          id="textDefault"
+          value={colors.textDefault}
+          onChange={setColorsFor('textDefault')}
+        />
+        <BtnBar>
+          <BtnWrapper>
+            <GroBtn ariaLabel="Apply Prefs" id="applyPrefs" onClick={apply}>
+              APPLY
+            </GroBtn>
+          </BtnWrapper>
+          <BtnWrapper>
+            <GroBtn ariaLabel="Randomize Colors" id="randPrefs" onClick={rand}>
+              <span role="img" aria-label="random color theme">
+                🎲
+              </span>
+            </GroBtn>
+          </BtnWrapper>
+          <BtnWrapper>
+            <GroBtn ariaLabel="Close Prefs" id="closePrefs" onClick={close}>
+              CLOSE
+            </GroBtn>
+          </BtnWrapper>
+        </BtnBar>
+      </GroPane>
+    </ModalPanel>
   )
 }

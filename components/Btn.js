@@ -9,6 +9,7 @@ export default styled.button`
   border: none;
   border-radius: 1px;
   white-space: nowrap;
+  width: fit-content;
   padding: 0.25rem;
   font-size: 1.2rem;
   line-height: 1.4rem;

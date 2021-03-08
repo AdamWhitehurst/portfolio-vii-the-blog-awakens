@@ -1,13 +1,13 @@
 import SEO from '@components/SEO'
-import SidebarLayout from '@layouts/sidebar-layout'
+import TopBtnLayout from '@layouts/top-btn'
 
 export default function BlogListLayout(props) {
   const { children } = props
 
   return (
-    <SidebarLayout>
+    <TopBtnLayout>
       <SEO customMeta={{ title: 'Blog Posts | Adam Whitehurst' }} />
       {children}
-    </SidebarLayout>
+    </TopBtnLayout>
   )
 }

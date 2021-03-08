@@ -6,11 +6,7 @@ const PostTeaser = (post) => <Teaser key={post.slug} post={post} />
 
 export default function BlogIndex({ posts }) {
   console.log(posts)
-  return (
-    <BlogListLayout>
-      {posts.map(PostTeaser)}
-    </BlogListLayout>
-  )
+  return <BlogListLayout>{posts.map(PostTeaser)}</BlogListLayout>
 }
 
 export async function getStaticProps() {

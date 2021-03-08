@@ -1,4 +1,3 @@
-
 import MdxComponents from '@components/MdxComponents'
 import MDXContainer from '@components/MDXContainer'
 import BlogPostLayout from '@layouts/blog-post-layout'
@@ -7,10 +6,14 @@ import hydrate from 'next-mdx-remote/hydrate'
 
 export default function BlogPost({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, {
-    components: MdxComponents,
+    components: MdxComponents
   })
 
-  return <BlogPostLayout frontMatter={frontMatter}><MDXContainer>{content}</MDXContainer></BlogPostLayout>
+  return (
+    <BlogPostLayout frontMatter={frontMatter}>
+      <MDXContainer>{content}</MDXContainer>
+    </BlogPostLayout>
+  )
 }
 
 export async function getStaticPaths() {
@@ -19,10 +22,10 @@ export async function getStaticPaths() {
   return {
     paths: posts.map((p) => ({
       params: {
-        slug: p.replace(/\.mdx/, ''),
-      },
+        slug: p.replace(/\.mdx/, '')
+      }
     })),
-    fallback: false,
+    fallback: false
   }
 }
 

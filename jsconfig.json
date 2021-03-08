@@ -9,5 +9,6 @@
       "@hooks/*": ["./hooks/*"],
       "@fonts/*": ["./fonts/*"]
     }
-  }
+  },
+  "exclude": ["node_modules"]
 }
