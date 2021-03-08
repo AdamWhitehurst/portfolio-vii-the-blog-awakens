@@ -1,6 +1,6 @@
 ---
 
-title: Title
+title: 'Title'
 date: {{date}}
 category: 
 template: 
