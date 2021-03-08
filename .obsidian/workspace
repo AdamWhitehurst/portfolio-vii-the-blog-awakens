@@ -8,9 +8,25 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
-        }
+          "type": "markdown",
+          "state": {
+            "file": "data/templates/note.md",
+            "mode": "source"
+          }
+        },
+        "group": "01179a35c7d46a15"
+      },
+      {
+        "id": "e9d272f96429892c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "data/templates/note.md",
+            "mode": "preview"
+          }
+        },
+        "group": "01179a35c7d46a15"
       },
       {
         "id": "5ccba678be9de541",
@@ -74,6 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "data/templates/note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,9 +103,12 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "lastOpenFiles": [
+    "data/templates/note.md",
+    "data/blog/cardano.md",
     "templates/note.md"
   ]
 }

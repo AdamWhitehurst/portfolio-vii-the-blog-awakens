@@ -2,12 +2,12 @@
 
 title: 'Title'
 date: {{date}}
-category: 
-template: 
-excerpt: tagline
+category: ''
+template: 'post'
+excerpt: 'tagline'
 image: 
 caption:
 tags:
-  - #tag
+  - '#tag'
   
 ---
