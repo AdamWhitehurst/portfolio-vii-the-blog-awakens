@@ -1,6 +1,6 @@
 ---
 title: Title
-date: 2020-12-19T21:13:54.902Z
+date: {{}}
 category: 'DeFi'
 template: 'post'
 excerpt: 'What is cardano?'
