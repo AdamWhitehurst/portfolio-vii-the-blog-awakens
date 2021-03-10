@@ -8,4 +8,8 @@ export default styled.header`
   justify-content: center;
   min-height: 40px;
   margin-bottom: 0.5rem;
+  @media only screen and (max-width: 720px) {
+    padding-left: 2rem;
+    justify-content: left;
+  }
 `

@@ -51,10 +51,11 @@ const PreviewContainer = styled.div`
   & h3,
   & h4,
   & h5,
-  & h {
+  & h6 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     font-weight: normal;
+    line-height: 1.8rem;
   }
 
   & .markdown-it-calendar {

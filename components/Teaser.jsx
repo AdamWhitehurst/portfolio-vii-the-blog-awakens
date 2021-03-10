@@ -2,6 +2,21 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styled from 'styled-components'
 
+const SmallDate = styled.small`
+  text-align: left;
+  width: max-content;
+  opacity: 0.5;
+  font-style: italic;
+  text-align: end;
+  padding-right: 0.25rem;
+`
+
+const ImageContainer = styled.div`
+  @media only screen and (max-width: 720px) {
+    display: none !important;
+  }
+`
+
 const Excerpt = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
@@ -15,6 +30,11 @@ const ImagePlaceholder = styled.div`
   height: 0px;
   min-height: 100%;
   max-height: 100%;
+  background-color: var(--accent);
+  opacity: 0.5;
+  @media only screen and (max-width: 720px) {
+    display: none !important;
+  }
 `
 
 const TeaserImage = styled(Image)``
@@ -22,15 +42,10 @@ const TeaserImage = styled(Image)``
 const CardTitle = styled.div`
   width: 100%;
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-between;
-
-  & small {
-    opacity: 0.5;
-    font-style: italic;
-    text-align: end;
-    padding: 0 0.25rem;
+  @media only screen and (max-width: 720px) {
+    flex-direction: column-reverse;
   }
+  justify-content: space-between;
 `
 
 const TeaserCard = styled.div`
@@ -44,9 +59,10 @@ const TeaserCard = styled.div`
   & h2 {
     font-size: 2rem;
     font-weight: 100;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
     color: var(--text-default);
     margin-bottom: 4px;
+    width: max-content;
   }
 
   & p {
@@ -63,6 +79,10 @@ const TeaserContainer = styled.article`
   height: 7rem;
   border-radius: 2px;
   margin: 2rem 2rem;
+
+  @media only screen and (max-width: 720px) {
+    justify-content: left;
+  }
 
   & h2 {
     transition: all 0.2s ease-in-out;
@@ -97,21 +117,24 @@ export default function Teaser({ post }) {
         <TeaserCard>
           <CardTitle>
             <h2>{title}</h2>
-            <small>{date}</small>
+            <SmallDate>{date}</SmallDate>
           </CardTitle>
           <Excerpt>
             <p>{excerpt}</p>
           </Excerpt>
         </TeaserCard>
         {image ? (
-          <TeaserImage
-            src={`/media/${image}`}
-            height={128}
-            width={128}
-            alt={caption}
-          />
+          <ImageContainer>
+            <TeaserImage
+              className="teaserImage"
+              src={`/media/${image}`}
+              height={128}
+              width={128}
+              alt={caption}
+            />
+          </ImageContainer>
         ) : (
-          <ImagePlaceholder />
+          <ImagePlaceholder className="teaserImage" />
         )}
       </TeaserContainer>
     </Link>

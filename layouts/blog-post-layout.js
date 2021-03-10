@@ -8,6 +8,7 @@ const PostH1 = styled.h1`
   text-align: center;
   font-style: italic;
   font-size: 3rem;
+  line-height: 2rem;
   color: var(--accent);
 `
 
