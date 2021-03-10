@@ -40,8 +40,8 @@ const mdxComponents = {
   Image,
   img: CustomImage,
   a: Link,
-  CodeSandbox,
-  code: Code,
+  CodeSandbox: CodeSandbox,
+  code: Code
 }
 
 export default mdxComponents

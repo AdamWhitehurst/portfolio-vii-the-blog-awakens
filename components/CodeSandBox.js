@@ -7,7 +7,7 @@ export default function CodeSandbox({ url, title }) {
         height: '500px',
         border: '0',
         borderRadius: '4px',
-        overflow: 'hidden',
+        overflow: 'hidden'
       }}
       title={title}
       allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
