@@ -4,7 +4,7 @@ import vsDark from 'prism-react-renderer/themes/vsDark'
 const highlightColorCodes = [
   '// highlight-line-one',
   '// highlight-line-two',
-  '// highlight-line-three',
+  '// highlight-line-three'
 ]
 
 const getHighlightedLine = (line, marks = highlightColorCodes) => {
@@ -22,12 +22,7 @@ const getHighlightedLine = (line, marks = highlightColorCodes) => {
 export default function Code({ children, className }) {
   const language = className?.replace(/language-/, '')
   return (
-    <Highlight
-      {...defaultProps}
-      theme={vsDark}
-      code={children}
-      language={language}
-    >
+    <Highlight {...defaultProps} theme={vsDark} code={children} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         return (
           <pre
@@ -43,7 +38,7 @@ export default function Code({ children, className }) {
 
               const finalLineProps = {
                 ...lineProps,
-                className: classNameArr.join(' '),
+                className: classNameArr.join(' ')
               }
               return (
                 <div key={i} {...finalLineProps}>
