@@ -42,10 +42,12 @@ export default function BlogPostLayout(props) {
         }}
         noIndex={!!draft}
       />
-      <MDXContainer>
-        <PostH1>{title}</PostH1>
-        {children}
-      </MDXContainer>
+      <Center>
+        <MDXContainer>
+          <PostH1>{title}</PostH1>
+          {children}
+        </MDXContainer>
+      </Center>
     </TopBtnLayout>
   )
 }

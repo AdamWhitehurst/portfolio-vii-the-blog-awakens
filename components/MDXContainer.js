@@ -3,13 +3,12 @@ import styled from 'styled-components'
 const PreviewContainer = styled.div`
   flex: 1;
   border-radius: 1px;
-  margin-left: 0.25rem;
   padding: 0.5rem 1.5rem;
   overflow: auto;
   line-height: 1.5rem;
   vertical-align: bottom;
   letter-spacing: 0.01rem;
-  max-width: 100vw;
+  max-width: 1024px;
   color: var(--text-default);
 
   & p,
@@ -138,6 +137,11 @@ const PreviewContainer = styled.div`
     &::before {
       content: '^ ';
     }
+  }
+
+  & blockquote {
+    padding-left: 2rem;
+    border-left: 2px solid var(--accent);
   }
 `
 

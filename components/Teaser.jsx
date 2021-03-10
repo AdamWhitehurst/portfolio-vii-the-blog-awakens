@@ -64,8 +64,24 @@ const TeaserContainer = styled.article`
   border-radius: 2px;
   margin: 2rem 2rem;
 
+  & h2 {
+    transition: all 0.2s ease-in-out;
+    &::after {
+      transition: all 0.2s ease-in-out;
+      background-color: var(--accent);
+      display: block;
+      content: '';
+      height: 2px;
+      width: 0;
+      opacity: 0;
+    }
+  }
+
   &:hover {
-    color: var(--accent);
+    & h2::after {
+      width: 100%;
+      opacity: 1;
+    }
     & h2 {
       color: var(--accent);
     }

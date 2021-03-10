@@ -12,9 +12,11 @@ import styled from 'styled-components'
 
 const ModalPanel = styled.div`
   position: absolute;
+  margin: auto;
   top: 50%;
-  left: 25%;
-  width: 50%;
+  left: 20%;
+  right: 20%;
+  max-width: 512px;
   background-color: var(--base);
   z-index: 10;
   padding: 1rem;

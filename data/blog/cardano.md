@@ -1,4 +1,5 @@
 ---
+
 title: Cardano
 date: 2020-12-19T21:13:54.902Z
 category: 'DeFi'
@@ -9,8 +10,8 @@ caption:
 tags:
   - '#Cardano'
   - '#DeFi'
+  
 ---
 
-# Cardano
-
-[[polkadot]]
+![[Pasted image 20210308185425.png]]
+*Figure: Sample of current business conortiums. Of note: DTCC, IBM, JP Morgan*
