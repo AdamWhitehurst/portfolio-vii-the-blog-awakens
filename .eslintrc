@@ -29,6 +29,7 @@
           ["@layouts", "./layouts/"],
           ["@lib", "./lib/"],
           ["@hooks", "./hooks/"],
+          ["@wasm", "./wasm/"],
           ["@fonts", "./fonts/"]
         ],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]

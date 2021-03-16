@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "data/blog/case_for_meditation.md",
+            "file": "data/templates/note.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "data/blog/case_for_meditation.md",
+                "file": "data/templates/note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,13 +94,14 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "data/templates/note.md",
+    "data/blog/Untitled.md",
+    "data/blog/who_is_satoshi.md",
     "data/blog/case_for_meditation.md",
     "data/blog/code_stylometry.md",
     "data/blog/palantir_thesis.md",
     "data/blog/pasted-image-20210308185425-png.md",
     "data/blog/cardano.md",
-    "data/blog/Untitled.md",
-    "data/templates/note.md",
     "templates/note.md"
   ]
 }

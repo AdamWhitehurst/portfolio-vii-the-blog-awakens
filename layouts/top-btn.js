@@ -26,7 +26,9 @@ export default function TopBtnLayout({ children }) {
           </Link>
         </BtnWrapper>
         <BtnWrapper>
-          <GroBtn>ROGULEDITES</GroBtn>
+          <Link href="/roguie">
+            <GroBtn>ROGULEDITES</GroBtn>
+          </Link>
         </BtnWrapper>
         <BtnWrapper>
           <PrefsPane />

@@ -6,10 +6,18 @@ import './_app.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* canvas element (id="canvas") is required by
+      bracket-lib wasm module to exist at all times once
+      the module is loaded. RoguieCanvas Component handles
+      displaying and hiding this element. */}
+      <canvas
+        id="canvas"
+        width="640"
+        height="400"
+        style={{ display: 'none' }}
+      ></canvas>
       <Signature />
-      <Component
-        {...pageProps}
-      />
+      <Component {...pageProps} />
     </>
   )
 }
