@@ -4,6 +4,7 @@ title: 'Palantir Thesis'
 date: 2021-03-07T19:53:54-08:00
 category: 'Stocks'
 template: 'post'
+article: true
 excerpt: 'My current thesis on $PLTR'
 image: palantir.png
 caption:

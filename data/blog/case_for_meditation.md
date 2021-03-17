@@ -3,9 +3,10 @@
 title: 'Case For Meditation'
 date: 2021-03-08T13:24:48-08:00
 category: 'Miscellaneous'
+article: true
 template: 'post'
 excerpt: 'Why I think you should try meditation'
-image: 
+image: headspace.png
 caption:
 tags:
   - '#health'
@@ -63,7 +64,7 @@ I have tried hard to emphasize that this evidence is not totally conclusive. **R
 # 🤩 Ready to Give it a Shot?
 I highly recommend the [Headspace App ](https://www.headspace.com/headspace-meditation-app) (I'm not sponsored, just a fan)
 
-![Headspace logo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgood4younutrition.com.au%2Fwp-content%2Fuploads%2F2017%2F03%2Fheadspace-app.png&f=1&nofb=1)
+![[headspace.png]]
 
 It has a free 10-day, 10-minute beginner course and I think that's all it will take for you to start noticing the difference. It's also a cheap membership once you are ready to keep going. I have taken the beginner course with Andy several times, paid for the membership and found the paid content to be exceptional as well. I cannot recommend it enough.
 

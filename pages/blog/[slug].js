@@ -1,17 +1,17 @@
-import MdxComponents from '@components/MdxComponents'
+import mdxComponents from '@components/mdxComponents'
 import MDXContainer from '@components/MDXContainer'
 import BlogPostLayout from '@layouts/blog-post-layout'
 import { getFileBySlug, getFiles } from '@lib/mdx'
-import hydrate from 'next-mdx-remote/hydrate'
+import { getMDXComponent } from 'mdx-bundler/client'
+import * as React from 'react'
 
 export default function BlogPost({ mdxSource, frontMatter }) {
-  const content = hydrate(mdxSource, {
-    components: MdxComponents
-  })
-
+  const Component = React.useMemo(() => getMDXComponent(mdxSource), [mdxSource])
   return (
     <BlogPostLayout frontMatter={frontMatter}>
-      <MDXContainer>{content}</MDXContainer>
+      <MDXContainer>
+        <Component components={mdxComponents} />
+      </MDXContainer>
     </BlogPostLayout>
   )
 }

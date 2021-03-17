@@ -3,6 +3,7 @@ title: Who is Satoshi?
 date: 2020-12-19T21:13:54.902Z
 category: 'Crypto'
 template: 'post'
+article: true
 excerpt: 'Who is the founder of Bitcoin, known as "Satoshi Nakamoto?"'
 image:
 caption:

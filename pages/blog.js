@@ -12,7 +12,7 @@ export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
 
   const sortedPosts = posts
-    .filter((post) => !post?.draft)
+    .filter((post) => !post?.draft && post?.article)
     .sort((a, b) => new Date(a.date) - new Date(b.date))
     .reverse()
 

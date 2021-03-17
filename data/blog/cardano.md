@@ -13,5 +13,9 @@ tags:
   
 ---
 
-![[Pasted image 20210308185425.png]]
+![[headspace.png]]
+
+![[Pasted image 1.png]]![[Pasted image 2.png]]
+
+![[Pasted image 1.png]]
 *Figure: Sample of current business conortiums. Of note: DTCC, IBM, JP Morgan*
