@@ -124,7 +124,7 @@ export default function RoguieCanvas() {
   return (
     <CanvasContainer ref={ref}>
       {modalOpen ? (
-        <ModalPanel maxWidth="1024px" onPanelClose={closeModal}>
+        <ModalPanel title="INSTRUCTIONS" maxWidth="1024px" onPanelClose={closeModal}>
           <br />
           <Keyboard />
         </ModalPanel>

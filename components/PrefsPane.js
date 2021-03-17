@@ -118,7 +118,8 @@ function Prefs(props) {
     setColors({ ...colors, [key]: e.target.value })
 
   return (
-    <ModalPanel>
+    <ModalPanel title="PREFERENCES">
+      <br />
       <Label htmlFor="base"> BASE COLOR </Label>
       <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
       <Label htmlFor="accent"> ACCENT COLOR </Label>

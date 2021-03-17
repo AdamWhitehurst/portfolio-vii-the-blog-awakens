@@ -5,8 +5,16 @@ import styled from 'styled-components'
 const CloseBtn = styled(Btn)`
   position: absolute;
   right: 7px;
-  top: 0;
+  top: 5px;
   z-index: 100;
+`
+const ModalTitle = styled.label`
+  display: block;
+  font-weight: 500;
+  font-size: 1.2rem;
+  cursor: grab;
+  width: 100%;
+  text-align: center;
 `
 
 const CloseIcon = () => (
@@ -25,12 +33,20 @@ const ModalPanel = styled.div`
   background-color: var(--base);
   z-index: 10;
   padding: 1rem;
+  padding-top: 0.5rem;
   box-shadow: 0px 1px 3px 1px #000;
 `
 
-const DraggableModalPanel = ({ onPanelClose, children, ...otherProps }) => (
-  <Draggable>
+const DraggableModalPanel = ({
+  onPanelClose,
+  children,
+  handle = 'label',
+  title,
+  ...otherProps
+}) => (
+  <Draggable handle={handle}>
     <ModalPanel {...otherProps}>
+      {title ? <ModalTitle>{title}</ModalTitle> : null}
       {onPanelClose ? (
         <CloseBtn onClick={onPanelClose}>
           <CloseIcon />
