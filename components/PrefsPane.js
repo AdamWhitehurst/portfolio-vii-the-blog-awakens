@@ -1,27 +1,14 @@
 import BtnBar from '@components/BtnBar'
 import BtnWrapper from '@components/BtnWrapper'
 import GroBtn from '@components/GroBtn'
-import GroPane from '@components/GroPane'
 import InputField from '@components/InputField'
 import Label from '@components/Label'
+import ModalPanel from '@components/ModalPanel'
 import usePersistentState from '@hooks/usePersistentState'
 import toSlugCase from '@lib/toSlugCase'
 import { dequal } from 'dequal'
 import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
-
-const ModalPanel = styled.div`
-  position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 20%;
-  right: 20%;
-  max-width: 512px;
-  background-color: var(--base);
-  z-index: 10;
-  padding: 1rem;
-  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.75);
-`
+import Draggable from 'react-draggable'
 
 const defaultColors = {
   accent: '#DAA52088',
@@ -96,7 +83,11 @@ export default function PrefsPane() {
       {prefsOpen ? (
         <Prefs colors={colors} onApply={onApply} onClose={onClose} />
       ) : null}
-      <GroBtn ariaLabel="Open Prefs" id="openPrefs" onClick={open}>
+      <GroBtn
+        ariaLabel="Open Prefs"
+        id="openPrefs"
+        onClick={prefsOpen ? onClose : open}
+      >
         PREFS
       </GroBtn>
     </>
@@ -127,8 +118,8 @@ function Prefs(props) {
     setColors({ ...colors, [key]: e.target.value })
 
   return (
-    <ModalPanel>
-      <GroPane height="170px" expand>
+    <Draggable>
+      <ModalPanel>
         <Label htmlFor="base"> BASE COLOR </Label>
         <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
         <Label htmlFor="accent"> ACCENT COLOR </Label>
@@ -162,7 +153,7 @@ function Prefs(props) {
             </GroBtn>
           </BtnWrapper>
         </BtnBar>
-      </GroPane>
-    </ModalPanel>
+      </ModalPanel>
+    </Draggable>
   )
 }
