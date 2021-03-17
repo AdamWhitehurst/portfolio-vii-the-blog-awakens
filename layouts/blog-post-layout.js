@@ -3,11 +3,11 @@ import SEO from '@components/SEO'
 import TopBtnLayout from '@layouts/top-btn'
 import styled from 'styled-components'
 
-const TitleWatermark = styled.h1`
-  margin-left: 2rem;
+const TitleWatermark = styled.p`
+  margin-left: 1.5rem;
   text-align: center;
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2rem;
   color: var(--accent);
   white-space: nowrap;
@@ -16,7 +16,7 @@ const TitleWatermark = styled.h1`
   position: relative;
   bottom: 0;
   z-index: -10;
-  filter: blur(3px) opacity(30%) invert();
+  filter: blur(1px) opacity(10%) invert();
   position: fixed;
 `
 const PostH1 = styled.h1`
