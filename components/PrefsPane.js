@@ -16,6 +16,7 @@ const defaultColors = {
 }
 
 const randomColors = [
+  defaultColors,
   {
     accent: '#97B55A',
     base: '#2A2021',
