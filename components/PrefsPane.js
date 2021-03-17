@@ -8,7 +8,6 @@ import usePersistentState from '@hooks/usePersistentState'
 import toSlugCase from '@lib/toSlugCase'
 import { dequal } from 'dequal'
 import React, { useEffect, useState } from 'react'
-import Draggable from 'react-draggable'
 
 const defaultColors = {
   accent: '#DAA52088',
@@ -118,42 +117,40 @@ function Prefs(props) {
     setColors({ ...colors, [key]: e.target.value })
 
   return (
-    <Draggable>
-      <ModalPanel>
-        <Label htmlFor="base"> BASE COLOR </Label>
-        <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
-        <Label htmlFor="accent"> ACCENT COLOR </Label>
-        <InputField
-          id="accent"
-          value={colors.accent}
-          onChange={setColorsFor('accent')}
-        />
-        <Label htmlFor="textDefault"> TEXT COLOR </Label>
-        <InputField
-          id="textDefault"
-          value={colors.textDefault}
-          onChange={setColorsFor('textDefault')}
-        />
-        <BtnBar>
-          <BtnWrapper>
-            <GroBtn ariaLabel="Apply Prefs" id="applyPrefs" onClick={apply}>
-              APPLY
-            </GroBtn>
-          </BtnWrapper>
-          <BtnWrapper>
-            <GroBtn ariaLabel="Randomize Colors" id="randPrefs" onClick={rand}>
-              <span role="img" aria-label="random color theme">
-                🎲
-              </span>
-            </GroBtn>
-          </BtnWrapper>
-          <BtnWrapper>
-            <GroBtn ariaLabel="Close Prefs" id="closePrefs" onClick={close}>
-              CLOSE
-            </GroBtn>
-          </BtnWrapper>
-        </BtnBar>
-      </ModalPanel>
-    </Draggable>
+    <ModalPanel>
+      <Label htmlFor="base"> BASE COLOR </Label>
+      <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
+      <Label htmlFor="accent"> ACCENT COLOR </Label>
+      <InputField
+        id="accent"
+        value={colors.accent}
+        onChange={setColorsFor('accent')}
+      />
+      <Label htmlFor="textDefault"> TEXT COLOR </Label>
+      <InputField
+        id="textDefault"
+        value={colors.textDefault}
+        onChange={setColorsFor('textDefault')}
+      />
+      <BtnBar>
+        <BtnWrapper>
+          <GroBtn ariaLabel="Apply Prefs" id="applyPrefs" onClick={apply}>
+            APPLY
+          </GroBtn>
+        </BtnWrapper>
+        <BtnWrapper>
+          <GroBtn ariaLabel="Randomize Colors" id="randPrefs" onClick={rand}>
+            <span role="img" aria-label="random color theme">
+              🎲
+            </span>
+          </GroBtn>
+        </BtnWrapper>
+        <BtnWrapper>
+          <GroBtn ariaLabel="Close Prefs" id="closePrefs" onClick={close}>
+            CLOSE
+          </GroBtn>
+        </BtnWrapper>
+      </BtnBar>
+    </ModalPanel>
   )
 }

@@ -1,10 +1,11 @@
 import Btn from '@components/Btn'
+import ModalPanel from '@components/ModalPanel'
 import RowBx from '@components/RowBox'
 import React from 'react'
 import styled from 'styled-components'
-
 /* eslint-disable-next-line */
-import('@wasm/roguie_bg.wasm').then((wasm) => wasm.__wbindgen_start());
+  import('@wasm/roguie_bg.wasm').then((wasm) => wasm && wasm.__wbindgen_start())
+
 
 export const WASMCanvas = styled.canvas`
   width: 640px;
@@ -28,7 +29,6 @@ const StopRecordIcon = () => (
     ⬜
   </span>
 )
-
 const appendBlobAsVidTo = (blob, elem) => {
   // const container = document.createElement('div')
   // container.id = 'video-container'
@@ -57,6 +57,7 @@ export default function RoguieCanvas() {
   // the DOM
   const ref = React.useRef()
   const [recorder, setRecorder] = React.useState()
+  const [modalOpen, setModalOpen] = React.useState(false)
 
   React.useEffect(() => {
     // On load, this Component finds the canvas element, appends it to itself
@@ -116,41 +117,54 @@ export default function RoguieCanvas() {
     recorder.stop()
   }
 
+  const openModal = () => setModalOpen(true)
+  const closeModal = () => setModalOpen(false)
+
   return (
     <CanvasContainer ref={ref}>
-      <RowBx id="roguie-btns">
-        <Btn onClick={startRecording}>
-          <RecordIcon />
-        </Btn>
-        <Btn onClick={stopRecording}>
-          <StopRecordIcon />
-        </Btn>
-        <p>
-          <b>
-            Note: This is a major WIP. Red circle records, White square stops record
-          </b>
-          <br />
-          Press
-          {'   '}
-          <code>G</code>
-          {'   '}
-          to grab items.
-          <br />
-          Press
-          {'   '}
-          <code>.</code>
-          {'   '}
-          to descend when you find stairs.
-          <br />
-          <code>I</code>
-          {'   '}
-          opens inventory.
-          <br />
-          <code>D</code>
-          {'   '}
-          opens drop menu.
-        </p>
-      </RowBx>
+      <Btn onClick={modalOpen ? closeModal : openModal}>INSTRUCTIONS</Btn>
+      {modalOpen ? (
+        <ModalPanel onPanelClose={closeModal}>
+          <RowBx id="roguie-btns" justifyContent="space-between">
+            <div>
+              <Btn onClick={startRecording}>
+                <RecordIcon />
+              </Btn>
+              <Btn onClick={stopRecording}>
+                <StopRecordIcon />
+              </Btn>
+            </div>
+          </RowBx>
+          <RowBx>
+            <p>
+              <b>
+                Note: This is a major WIP. Red circle records, White square stops
+                record
+              </b>
+              <br />
+              Press
+              {'   '}
+              <code>G</code>
+              {'   '}
+              to grab items.
+              <br />
+              Press
+              {'   '}
+              <code>.</code>
+              {'   '}
+              to descend when you find stairs.
+              <br />
+              <code>I</code>
+              {'   '}
+              opens inventory.
+              <br />
+              <code>D</code>
+              {'   '}
+              opens drop menu.
+            </p>
+          </RowBx>
+        </ModalPanel>
+      ) : null}
     </CanvasContainer>
   )
 }
