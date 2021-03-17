@@ -1,4 +1,4 @@
-import mdxComponents from '@components/mdxComponents'
+import mdxComponents from '@components/MdxComponents'
 import MDXContainer from '@components/MDXContainer'
 import BlogPostLayout from '@layouts/blog-post-layout'
 import { getFileBySlug, getFiles } from '@lib/mdx'
