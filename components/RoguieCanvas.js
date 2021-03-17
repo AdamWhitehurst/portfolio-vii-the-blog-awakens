@@ -1,6 +1,6 @@
 import Btn from '@components/Btn'
+import Keyboard from '@components/keyboard.svg'
 import ModalPanel from '@components/ModalPanel'
-import RowBx from '@components/RowBox'
 import React from 'react'
 import styled from 'styled-components'
 /* eslint-disable-next-line */
@@ -124,45 +124,9 @@ export default function RoguieCanvas() {
     <CanvasContainer ref={ref}>
       <Btn onClick={modalOpen ? closeModal : openModal}>INSTRUCTIONS</Btn>
       {modalOpen ? (
-        <ModalPanel onPanelClose={closeModal}>
-          <RowBx id="roguie-btns" justifyContent="space-between">
-            <div>
-              <Btn onClick={startRecording}>
-                <RecordIcon />
-              </Btn>
-              <Btn onClick={stopRecording}>
-                <StopRecordIcon />
-              </Btn>
-            </div>
-          </RowBx>
-          <RowBx>
-            <p>
-              <b>
-                Note: This is a major WIP. Red circle records, White square stops
-                record
-              </b>
-              <br />
-              Press
-              {'   '}
-              <code>G</code>
-              {'   '}
-              to grab items.
-              <br />
-              Press
-              {'   '}
-              <code>.</code>
-              {'   '}
-              to descend when you find stairs.
-              <br />
-              <code>I</code>
-              {'   '}
-              opens inventory.
-              <br />
-              <code>D</code>
-              {'   '}
-              opens drop menu.
-            </p>
-          </RowBx>
+        <ModalPanel maxWidth="1024px" onPanelClose={closeModal}>
+          <br />
+          <Keyboard />
         </ModalPanel>
       ) : null}
     </CanvasContainer>
