@@ -1,6 +1,7 @@
 import Btn from '@components/Btn'
 import Keyboard from '@components/keyboard.svg'
 import ModalPanel from '@components/ModalPanel'
+import RowBx from '@components/RowBox'
 import React from 'react'
 import styled from 'styled-components'
 /* eslint-disable-next-line */
@@ -122,13 +123,23 @@ export default function RoguieCanvas() {
 
   return (
     <CanvasContainer ref={ref}>
-      <Btn onClick={modalOpen ? closeModal : openModal}>INSTRUCTIONS</Btn>
       {modalOpen ? (
         <ModalPanel maxWidth="1024px" onPanelClose={closeModal}>
           <br />
           <Keyboard />
         </ModalPanel>
       ) : null}
+      <RowBx id="roguie-btns" justifyContent="space-between">
+        <Btn onClick={modalOpen ? closeModal : openModal}>INSTRUCTIONS</Btn>
+        <div>
+          <Btn onClick={startRecording}>
+            <RecordIcon />
+          </Btn>
+          <Btn onClick={stopRecording}>
+            <StopRecordIcon />
+          </Btn>
+        </div>
+      </RowBx>
     </CanvasContainer>
   )
 }
