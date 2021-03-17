@@ -3,11 +3,11 @@ import SEO from '@components/SEO'
 import TopBtnLayout from '@layouts/top-btn'
 import styled from 'styled-components'
 
-const PostH1 = styled.h1`
-  margin-left: 2.25rem;
+const TitleWatermark = styled.h1`
+  margin-left: 2rem;
   text-align: center;
   font-style: italic;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 2rem;
   color: var(--accent);
   white-space: nowrap;
@@ -16,8 +16,16 @@ const PostH1 = styled.h1`
   position: relative;
   bottom: 0;
   z-index: -10;
-  filter: blur(2px) opacity(30%);
+  filter: blur(3px) opacity(30%) invert();
   position: fixed;
+`
+const PostH1 = styled.h1`
+  margin-left: 1.25rem;
+  text-align: center;
+  font-style: italic;
+  font-size: 3rem;
+  line-height: 2rem;
+  color: var(--accent);
 `
 
 const Center = styled.div`
@@ -41,7 +49,7 @@ export default function BlogPostLayout(props) {
 
   return (
     <>
-      <PostH1>{title}</PostH1>
+      <TitleWatermark>{title}</TitleWatermark>
       <TopBtnLayout>
         <SEO
           customMeta={{
@@ -53,6 +61,7 @@ export default function BlogPostLayout(props) {
           }}
           noIndex={!!draft}
         />
+        <PostH1>{title}</PostH1>
         <Center>
           <MDXContainer>{children}</MDXContainer>
         </Center>
