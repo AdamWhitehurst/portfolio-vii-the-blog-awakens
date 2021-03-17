@@ -7,8 +7,8 @@ export default styled(SVG)`
   top: 0;
   height: 70px;
   z-index: -99;
+  /* filter:  */
   /* animation: fade 12s linear infinite; */
-
   @keyframes fade {
     0% {
       opacity: 1;
