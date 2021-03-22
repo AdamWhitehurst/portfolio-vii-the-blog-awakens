@@ -12,6 +12,9 @@ const SmallDate = styled.small`
 `
 
 const ImageContainer = styled.div`
+  position: relative;
+  left: 0px;
+  z-index: 10;
   @media only screen and (max-width: 720px) {
     display: none !important;
   }
@@ -112,17 +115,8 @@ export default function Teaser({ post }) {
   const { title, slug, date, excerpt, image, caption } = post
 
   return (
-    <Link href={`/blog/${slug}`} prefetch={false}>
+    <Link href={`/corpus/${slug}`} prefetch={false}>
       <TeaserContainer>
-        <TeaserCard>
-          <CardTitle>
-            <h2>{title}</h2>
-            <SmallDate>{date}</SmallDate>
-          </CardTitle>
-          <Excerpt>
-            <p>{excerpt}</p>
-          </Excerpt>
-        </TeaserCard>
         {image ? (
           <ImageContainer>
             <TeaserImage
@@ -136,6 +130,15 @@ export default function Teaser({ post }) {
         ) : (
           <ImagePlaceholder className="teaserImage" />
         )}
+        <TeaserCard>
+          <CardTitle>
+            <h2>{title}</h2>
+            <SmallDate>{date}</SmallDate>
+          </CardTitle>
+          <Excerpt>
+            <p>{excerpt}</p>
+          </Excerpt>
+        </TeaserCard>
       </TeaserContainer>
     </Link>
   )

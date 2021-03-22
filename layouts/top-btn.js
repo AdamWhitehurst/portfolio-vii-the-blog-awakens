@@ -21,8 +21,8 @@ export default function TopBtnLayout({ children }) {
           </Link>
         </BtnWrapper>
         <BtnWrapper>
-          <Link href="/blog">
-            <GroBtn>BLOG</GroBtn>
+          <Link href="/corpus">
+            <GroBtn>CORPUS</GroBtn>
           </Link>
         </BtnWrapper>
         <BtnWrapper>

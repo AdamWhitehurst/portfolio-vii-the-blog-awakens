@@ -34,7 +34,7 @@ const Center = styled.div`
   justify-content: center;
 `
 
-export default function BlogPostLayout(props) {
+export default function PostLayout(props) {
   const { children, frontMatter } = props
   const {
     title,

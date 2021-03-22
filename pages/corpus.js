@@ -1,15 +1,15 @@
 import Teaser from '@components/Teaser'
-import BlogListLayout from '@layouts/blog-list-layout'
+import CorpusListLayout from '@layouts/corpus-list-layout'
 import { getAllFilesFrontMatter } from '@lib/mdx'
 
 const PostTeaser = (post) => <Teaser key={post.slug} post={post} />
 
-export default function BlogIndex({ posts }) {
-  return <BlogListLayout>{posts.map(PostTeaser)}</BlogListLayout>
+export default function CorpusIndex({ posts }) {
+  return <CorpusListLayout>{posts.map(PostTeaser)}</CorpusListLayout>
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('blog')
+  const posts = await getAllFilesFrontMatter('corpus')
 
   const sortedPosts = posts
     .filter((post) => !post?.draft && post?.article)

@@ -1,23 +1,23 @@
 import mdxComponents from '@components/MdxComponents'
 import MDXContainer from '@components/MDXContainer'
-import BlogPostLayout from '@layouts/blog-post-layout'
+import PostLayout from '@layouts/post-layout'
 import { getFileBySlug, getFiles } from '@lib/mdx'
 import { getMDXComponent } from 'mdx-bundler/client'
 import * as React from 'react'
 
-export default function BlogPost({ mdxSource, frontMatter }) {
+export default function Post({ mdxSource, frontMatter }) {
   const Component = React.useMemo(() => getMDXComponent(mdxSource), [mdxSource])
   return (
-    <BlogPostLayout frontMatter={frontMatter}>
+    <PostLayout frontMatter={frontMatter}>
       <MDXContainer>
         <Component components={mdxComponents} />
       </MDXContainer>
-    </BlogPostLayout>
+    </PostLayout>
   )
 }
 
 export async function getStaticPaths() {
-  let posts = await getFiles('blog')
+  let posts = await getFiles('corpus')
 
   return {
     paths: posts.map((p) => ({
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getFileBySlug('blog', params.slug)
+  const post = await getFileBySlug('corpus', params.slug)
 
   return { props: post }
 }

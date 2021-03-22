@@ -19,8 +19,8 @@ export default function SidebarLayout({ children }) {
           <Link href="/">
             <GroBtn>HOME</GroBtn>
           </Link>
-          <Link href="/blog">
-            <GroBtn>BLOG</GroBtn>
+          <Link href="/corpus">
+            <GroBtn>CORPUS</GroBtn>
           </Link>
           <GroBtn>ROGULEDITES</GroBtn>
           <PrefsPane />

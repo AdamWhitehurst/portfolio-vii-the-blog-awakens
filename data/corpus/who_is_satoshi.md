@@ -17,11 +17,10 @@ tags:
 
 Satoshi Nakamoto is the author of [Bitcoin's whitepaper](https://www.mail-archive.com/cryptography@metzdowd.com/msg09959.html) and wrote its [original source code](https://satoshi.nakamotoinstitute.org/code/). However, Satoshi Nakamoto is presumed to be a pseudonym as no one by this name can be found. The are many clues that point towards Satoshi Nakamoto actually being [Adam Back](https://en.wikipedia.org/wiki/Adam_Back):
 
-    1. He was a cryptopunk, so he was familiar with the practice of using pseudonyms.
-
-    2. He was the first one Satoshi contacted on the [metzdowd cryptography list](https://www.mail-archive.com/cryptography@metzdowd.com/index.html).
-    3. He wrote [Hashcash](https://en.wikipedia.org/wiki/Hashcash), which is used in the Bitcoin mining process.
-    4. He was school in the UK during the time where [Forth](<https://en.wikipedia.org/wiki/Forth_(programming_language)>) was commonly taught. Bitcoin's scripting language, Script, is [Forth](<https://en.wikipedia.org/wiki/Forth_(programming_language)>)-like.
+1. He was a cryptopunk, so he was familiar with the practice of using pseudonyms.
+2. He was the first one Satoshi contacted on the [metzdowd cryptography list](https://www.mail-archive.com/cryptography@metzdowd.com/index.html).
+4. He wrote [Hashcash](https://en.wikipedia.org/wiki/Hashcash), which is used in the Bitcoin mining process.
+5. He was school in the UK during the time where [Forth](<https://en.wikipedia.org/wiki/Forth_(programming_language)>) was commonly taught. Bitcoin's scripting language, Script, is [Forth](https://en.wikipedia.org/wiki/Forth_(programming_language))-like.
 
 # Testing
 

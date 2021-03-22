@@ -94,6 +94,10 @@ Palantir has a Silo Model SaaS platforms. This means each customer gets their ow
 [Google's Knowledge Graph has over 500 billion facts about 5 billion entities](https://www.searchenginejournal.com/google-knowledge-graph/369484/) 🤯
 They have solved most SaaS problems; they have it all. They might be able to squish Palantir.
 
+There is a strong case for Palantir over Google, however, that we already see materializing: Privacy. Privacy is critical to Palantir's offering. Google is the poster-child for data harvesting and user-privacy infringement. Moreover, Google is a competitor to some of these larger companies (e.g. Amazon). So it stands to reason that the Government and Biggest-Tech entities will go with Planatiro over Google to protect their data.
+
+Finally, in my own personal software developer bias: Google has yet to release any plug-and-play solution that deploys their data analytics software as sophistocated as Palantir's Apollo. Google Cloud Platform and Google Analytics do not compare.
+
 ## Snowflake? 
 Snowflake seems to provide mostly on-cloud data warehousing while Palantir is big data/data analytics. Can the two possibly collaborate?
 
