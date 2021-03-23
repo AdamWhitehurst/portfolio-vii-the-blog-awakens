@@ -18,21 +18,6 @@ Part of the [Robot Exclusion Standard](https://en.wikipedia.org/wiki/Robots_excl
 
 You can specify which `user-agent`s (such as `Googlebot` or `msnbot`) are `Disallow`ed from crawling certain routes on your site.
 
-```jsx
-import React, { useState } from "react";
-function Example() {
-  const \[count, setCount\] = useState(0);
-  return (
-     <div>
- 	   <p>You clicked {count} times</p>
- 	   <button onClick={() => setCount(count + 1)}>
- 	   Click me
- 	   </button>
-   </div>
- );
-}
-```
-
 ## Format
 ```text
 User-agent: [user-agent name]

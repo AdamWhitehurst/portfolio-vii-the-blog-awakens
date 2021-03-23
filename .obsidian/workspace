@@ -8,8 +8,11 @@
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "data/corpus/tldr_robots.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -66,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "data/corpus/tldr_robots.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,15 +102,15 @@
     "width": 300
   },
   "lastOpenFiles": [
-    "data/corpus/Untitled.md",
     "data/corpus/tldr_robots.md",
+    "data/corpus/smart_goals.md",
+    "data/corpus/Untitled.md",
     "data/periodic/daily_note_2021_03_23.md",
     "data/periodic/daily_note_2021_03_22.md",
     "data/templates/daily_note.md",
     "data/templates/note.md",
     "data/templates/weekly.md",
     "data/templates/Untitled.md",
-    "2021-W13.md",
-    "data/corpus/internet_corpus.md"
+    "2021-W13.md"
   ]
 }
