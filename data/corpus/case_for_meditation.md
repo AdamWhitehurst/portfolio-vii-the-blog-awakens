@@ -5,7 +5,7 @@ date: 2021-03-08T13:24:48-08:00
 category: 'Miscellaneous'
 article: true
 template: 'post'
-excerpt: 'Why I think you should try meditation'
+description: 'Why I think you should try meditation'
 image: headspace.png
 caption:
 tags:

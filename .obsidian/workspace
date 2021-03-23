@@ -4,29 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "74a11a650ed430a9",
+        "id": "c020c9246f0e45f8",
         "type": "leaf",
         "active": true,
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "data/corpus/smart_goals.md",
-            "mode": "source"
-          }
-        },
-        "group": "27fe6a90c6119163"
-      },
-      {
-        "id": "64d1592e2b57eb13",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "data/corpus/smart_goals.md",
-            "mode": "preview"
-          }
-        },
-        "group": "27fe6a90c6119163"
+          "type": "empty",
+          "state": {}
+        }
       }
     ],
     "direction": "vertical"
@@ -82,7 +66,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "data/corpus/smart_goals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,24 +81,32 @@
               "type": "advanced-tables-toolbar",
               "state": {}
             }
+          },
+          {
+            "id": "646ad4c65de8e017",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "lastOpenFiles": [
-    "data/corpus/smart_goals.md",
     "data/corpus/Untitled.md",
-    "data/blog/Untitled.md",
-    "data/blog/palantir_thesis.md",
-    "data/blog/who_is_satoshi.md",
-    "data/blog/cardano.md",
-    "data/blog/case_for_meditation.md",
+    "data/corpus/tldr_robots.md",
+    "data/periodic/daily_note_2021_03_23.md",
+    "data/periodic/daily_note_2021_03_22.md",
+    "data/templates/daily_note.md",
     "data/templates/note.md",
-    "data/blog/polkadot.md",
-    "data/blog/code_stylometry.md"
+    "data/templates/weekly.md",
+    "data/templates/Untitled.md",
+    "2021-W13.md",
+    "data/corpus/internet_corpus.md"
   ]
 }

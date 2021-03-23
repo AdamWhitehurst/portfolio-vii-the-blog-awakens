@@ -1,7 +1,7 @@
 import mdxComponents from '@components/MdxComponents'
 import MDXContainer from '@components/MDXContainer'
 import PostLayout from '@layouts/post-layout'
-import { getFileBySlug, getFiles } from '@lib/mdx'
+import { getFileBySlug, readFiles } from '@lib/mdx'
 import { getMDXComponent } from 'mdx-bundler/client'
 import * as React from 'react'
 
@@ -17,7 +17,7 @@ export default function Post({ mdxSource, frontMatter }) {
 }
 
 export async function getStaticPaths() {
-  let posts = await getFiles('corpus')
+  let posts = await readFiles('corpus')
 
   return {
     paths: posts.map((p) => ({

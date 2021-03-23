@@ -112,7 +112,7 @@ const TeaserContainer = styled.article`
 `
 
 export default function Teaser({ post }) {
-  const { title, slug, date, excerpt, image, caption } = post
+  const { title, slug, date, description, image, caption } = post
 
   return (
     <Link href={`/corpus/${slug}`} prefetch={false}>
@@ -136,7 +136,7 @@ export default function Teaser({ post }) {
             <SmallDate>{date}</SmallDate>
           </CardTitle>
           <Excerpt>
-            <p>{excerpt}</p>
+            <p>{description}</p>
           </Excerpt>
         </TeaserCard>
       </TeaserContainer>

@@ -4,7 +4,7 @@ title: 'SMART Goals'
 date: 2021-03-22T08:56:05-07:00
 category: ''
 template: 'post'
-excerpt: 'A system for dissecting goals into manageable pieces'
+description: 'A system for dissecting goals into manageable pieces'
 image: 
 caption:
 article: true
@@ -64,7 +64,8 @@ This goes hand-in-hand with measurability because adding a time-constraint makes
 
 ## Resources
 [Carch Course: SMART Goals](https://www.youtube.com/watch?v=LQ5Uj1nryBc)
+
 [DecisionSkills SMART Goals](https://www.youtube.com/watch?v=1-SvuFIQjK8)
 
-## Next Steps
+# Next Steps
 From here, I will be turning this goal-planning startegy into templates for my Obsidian system, and then considering how I will organize these goals to make them easier to track. Stay tuned.

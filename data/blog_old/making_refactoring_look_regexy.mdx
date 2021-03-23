@@ -3,7 +3,7 @@ title: Making Refactoring Look Regexy
 date: 2020-12-06T02:13:20.309Z
 category: 'JavaScript'
 template: 'post'
-excerpt: 'Using regex to do a large refactor in one click'
+description: 'Using regex to do a large refactor in one click'
 image: js.png
 caption:
 tags:
@@ -20,7 +20,10 @@ If someone genuinely feels like regex is hard to learn, to that I would say they
 Recently, I was doing some refactoring in a [typescript project](https://github.com/adamwhitehurst/bad-evan-bot) that I have, and I have a type called a `WeightedTable` which allows me to define the weights (probabilities) of randomly choosing a particular entry when taking a random sample. For example, if I have:
 
 ```js
-const weightTable = [['entryOne', 4], ['entryTwo', 6]]
+const weightTable = [
+  ['entryOne', 4],
+  ['entryTwo', 6]
+]
 ```
 
 and I say `getRandomEntryFrom(weightedTable)` 10 times, on average I will get `'entryOne'` 4 times, and `'entryTwo'` 6 times.

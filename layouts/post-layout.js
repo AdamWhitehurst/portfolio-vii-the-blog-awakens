@@ -43,7 +43,7 @@ export default function PostLayout(props) {
     slug,
     image,
     caption,
-    excerpt,
+    description,
     draft
   } = frontMatter
 
@@ -54,7 +54,7 @@ export default function PostLayout(props) {
         <SEO
           customMeta={{
             title: title,
-            description: excerpt,
+            description: description,
             type: 'article',
             image: image,
             date: date

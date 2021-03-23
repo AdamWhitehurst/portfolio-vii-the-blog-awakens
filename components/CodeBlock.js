@@ -1,5 +1,6 @@
 import Highlight, { defaultProps } from 'prism-react-renderer'
-import vsDark from 'prism-react-renderer/themes/vsDark'
+import dracula from 'prism-react-renderer/themes/dracula'
+import React from 'react'
 
 const highlightColorCodes = [
   '// highlight-line-one',
@@ -22,13 +23,14 @@ const getHighlightedLine = (line, marks = highlightColorCodes) => {
 export default function Code({ children, className }) {
   const language = className?.replace(/language-/, '')
   return (
-    <Highlight {...defaultProps} theme={vsDark} code={children} language={language}>
+    <Highlight {...defaultProps} theme={dracula} code={children} language={language}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
-        return (
-          <pre
-            className={`${className} overflow-auto w-72 sm:w-full`}
-            style={{ ...style, padding: '20px' }}
-          >
+        return tokens.length === 1 ? (
+          <code style={{ ...style, marginRight: '2px', padding: '0 3px' }}>
+            {tokens[0][0].content}
+          </code>
+        ) : (
+          <pre className={`${className}`} style={{ backgroundColor: '#121212' }}>
             {tokens.map((line, i) => {
               const lineProps = getLineProps({ line, key: i })
               const classNameArr = [lineProps.className]

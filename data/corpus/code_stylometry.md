@@ -3,7 +3,7 @@ title: What is Code Stylometry?
 date: 2020-12-19T21:13:54.902Z
 category: 'Code'
 template: 'post'
-excerpt: ''
+description: ''
 image:
 caption:
 tags:
