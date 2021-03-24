@@ -6,6 +6,7 @@
       {
         "id": "bc891666c2a7acb1",
         "type": "leaf",
+        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -18,7 +19,6 @@
       {
         "id": "006f5f7128f17e18",
         "type": "leaf",
-        "active": true,
         "state": {
           "type": "markdown",
           "state": {
@@ -66,7 +66,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "7c03c9f44f76cffc",
@@ -112,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "lastOpenFiles": [
     "data/periodic/daily_note_2021_03_24.md",

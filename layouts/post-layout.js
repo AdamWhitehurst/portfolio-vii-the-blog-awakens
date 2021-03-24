@@ -4,7 +4,7 @@ import TopBtnLayout from '@layouts/top-btn'
 import styled from 'styled-components'
 
 const TitleWatermark = styled.p`
-  margin-left: 1.5rem;
+  margin-left: 24px;
   text-align: center;
   font-style: italic;
   font-size: 2rem;
@@ -20,7 +20,7 @@ const TitleWatermark = styled.p`
   position: fixed;
 `
 const PostH1 = styled.h1`
-  margin-left: 1.25rem;
+  margin-left: 20px;
   text-align: center;
   font-style: italic;
   font-size: 3rem;

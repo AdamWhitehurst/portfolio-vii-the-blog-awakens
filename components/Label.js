@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export default styled.label`
-  margin: 0.2rem;
+  margin: 4px;
   white-space: nowrap;
   color: var(--accent);
   opacity: 1;

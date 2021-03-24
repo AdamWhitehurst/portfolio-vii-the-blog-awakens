@@ -6,5 +6,5 @@ export default styled.div`
   @media only screen and (min-width: 815px) {
     grid-template-columns: 175px 10fr;
   }
-  grid-gap: 0.5rem;
+  grid-gap: 8px;
 `

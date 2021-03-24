@@ -35,8 +35,8 @@ const ModalPanel = styled.div`
   max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : '512px')};
   background-color: var(--base);
   z-index: 10;
-  padding: 1rem;
-  padding-top: 0.5rem;
+  padding: 16px;
+  padding-top: 8px;
   box-shadow: 0px 1px 3px 1px #000;
 `
 

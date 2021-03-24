@@ -7,9 +7,9 @@ export default styled.header`
   align-items: flex-end;
   justify-content: center;
   min-height: 40px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
   @media only screen and (max-width: 720px) {
-    padding-left: 2rem;
+    padding-left: 32px;
     justify-content: left;
   }
 `

@@ -7,10 +7,10 @@ export default styled.input.attrs((props) => ({
   border: none;
   border-radius: 1px;
   color: var(--text-default);
-  margin-right: 0.2rem;
+  margin-right: 3px;
   width: 100%;
   background-color: var(--input-bg);
-  padding-left: 0.25rem;
+  padding-left: 4px;
   line-height: 0.5;
   font-weight: 300;
   font-style: italic;

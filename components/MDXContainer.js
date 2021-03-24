@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const PreviewContainer = styled.div`
   flex: 1;
   border-radius: 1px;
-  padding: 0.5rem 1.5rem;
+  padding: 8px 24px;
   overflow: auto;
   line-height: 1.5rem;
   vertical-align: bottom;
@@ -14,19 +14,19 @@ const PreviewContainer = styled.div`
   & p,
   & ul,
   & ol {
-    margin: 1rem 0;
+    margin: 16px 0;
   }
 
   & ol,
   & ul {
-    margin-left: 2rem;
-    padding: 1rem;
+    margin-left: 32px;
+    padding: 16px;
   }
 
   & code {
     background-color: #00000033;
     border-radius: 2px;
-    padding: 0.15rem;
+    padding: 2.5px;
     font-size: 1.1rem;
   }
 
@@ -42,7 +42,7 @@ const PreviewContainer = styled.div`
 
     font-family: monospace;
     border-radius: 2px;
-    padding: 0.25rem;
+    padding: 4px;
     background-color: #00000033;
   }
 
@@ -52,8 +52,8 @@ const PreviewContainer = styled.div`
   & h4,
   & h5,
   & h6 {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
     font-weight: normal;
     line-height: 1.8rem;
   }
@@ -141,7 +141,7 @@ const PreviewContainer = styled.div`
   }
 
   & blockquote {
-    padding-left: 2rem;
+    padding-left: 32px;
     border-left: 2px solid var(--accent);
   }
 `

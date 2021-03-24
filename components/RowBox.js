@@ -7,6 +7,6 @@ export default styled.div`
     justifyContent ? `justify-content: ${justifyContent};` : null}
   ${({ reverse }) =>
     reverse ? 'flex-direction: row-reverse;' : null}
-  padding-bottom: 0.25rem;
-  padding-top: 0.25rem;
+  padding-bottom: 4px;
+  padding-top: 4px;
 `

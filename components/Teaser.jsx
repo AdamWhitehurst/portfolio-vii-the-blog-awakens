@@ -8,7 +8,7 @@ const SmallDate = styled.small`
   opacity: 0.5;
   font-style: italic;
   text-align: end;
-  padding-right: 0.25rem;
+  padding-right: 4px;
 `
 
 const ImageContainer = styled.div`
@@ -56,7 +56,7 @@ const TeaserCard = styled.div`
   max-width: 1024px;
   flex-direction: column;
   flex: 10;
-  padding: 0.25rem;
+  padding: 4px;
   cursor: pointer;
 
   & h2 {
@@ -72,7 +72,7 @@ const TeaserCard = styled.div`
     flex: 1;
     font-style: italic;
     opacity: 0.5;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
   }
 `
 
@@ -81,7 +81,7 @@ const TeaserContainer = styled.article`
   justify-content: center;
   height: 7rem;
   border-radius: 2px;
-  margin: 2rem 2rem;
+  margin: 32px 32px;
 
   @media only screen and (max-width: 720px) {
     justify-content: left;
