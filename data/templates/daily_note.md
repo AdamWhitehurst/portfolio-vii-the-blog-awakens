@@ -21,3 +21,5 @@ tags:
 ## Tasks
  - [ ] Journal
  - [ ] Check / Pull Weekly Tasks
+
+## Journal

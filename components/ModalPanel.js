@@ -15,6 +15,9 @@ const ModalTitle = styled.label`
   cursor: grab;
   width: 100%;
   text-align: center;
+  &:hover {
+    opacity: 0.5;
+  }
 `
 
 const CloseIcon = () => (
