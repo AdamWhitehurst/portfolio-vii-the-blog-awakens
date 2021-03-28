@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "data/periodic/daily_note_2021_03_24.md",
+            "file": "data/corpus/investing_notes.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "data/periodic/daily_note_2021_03_24.md",
+            "file": "data/corpus/investing_notes.md",
             "mode": "preview"
           }
         },
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "data/periodic/daily_note_2021_03_24.md",
+                "file": "data/corpus/investing_notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,15 +117,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "data/corpus/Untitled.md",
+    "data/periodic/daily_note_2021_03_25.md",
+    "data/templates/weekly_note.md",
     "data/periodic/daily_note_2021_03_24.md",
+    "data/corpus/gme_a_fictional_account.md",
     "data/templates/daily_note.md",
     "data/periodic/daily_note_2021_03_22.md",
     "data/periodic/daily_note_2021_03_23.md",
-    "data/corpus/Untitled.md",
     "data/corpus/tldr_robots.md",
-    "data/corpus/smart_goals.md",
-    "data/templates/note.md",
-    "data/templates/weekly.md",
-    "data/templates/Untitled.md"
+    "data/corpus/smart_goals.md"
   ]
 }
