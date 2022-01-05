@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export default styled.h2`
@@ -15,7 +14,6 @@ export default styled.h2`
   &:hover {
     color: var(--accent);
   }
-  
   &[disabled],
   &:disabled {
     cursor: unset;
