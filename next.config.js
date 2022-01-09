@@ -5,6 +5,11 @@ module.exports = {
       use: ['@svgr/webpack']
     })
 
+    config.experiments = {
+      ...config.experiments,
+      asyncWebAssembly: true
+    }
+
     return config
   }
 }
