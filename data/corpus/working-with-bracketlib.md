@@ -2,6 +2,7 @@
 title: WASM Saving and Loading With Bracket-Lib
 date: 2020-11-09T05:13:17.509Z
 category: 'Rust'
+article: true
 template: 'post'
 description: 'Implementing saving and loading in WASM'
 image: roguies.png

@@ -8,7 +8,8 @@ export default styled.input.attrs((props) => ({
   border-radius: 1px;
   color: var(--text-default);
   margin-right: 3px;
-  width: 100%;
+  /* width: 100%; */
+  flex: 1;
   background-color: var(--input-bg);
   padding-left: 4px;
   line-height: 0.5;

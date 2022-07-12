@@ -8,6 +8,7 @@ import usePersistentState from '@hooks/usePersistentState'
 import toSlugCase from '@lib/toSlugCase'
 import { dequal } from 'dequal'
 import React, { useEffect, useState } from 'react'
+import styled from 'styled-components'
 
 const defaultColors = {
   accent: '#DAA52088',
@@ -94,6 +95,11 @@ export default function PrefsPane() {
   )
 }
 
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 function Prefs(props) {
   const { colors: savedColors, onApply, onClose: close } = props
   const [colors, setColors] = useState(savedColors)
@@ -120,20 +126,23 @@ function Prefs(props) {
   return (
     <ModalPanel title="PREFERENCES">
       <br />
-      <Label htmlFor="base"> BASE COLOR </Label>
-      <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
-      <Label htmlFor="accent"> ACCENT COLOR </Label>
-      <InputField
-        id="accent"
-        value={colors.accent}
-        onChange={setColorsFor('accent')}
-      />
-      <Label htmlFor="textDefault"> TEXT COLOR </Label>
-      <InputField
-        id="textDefault"
-        value={colors.textDefault}
-        onChange={setColorsFor('textDefault')}
-      />
+      <Container>
+        <Label htmlFor="base"> BASE COLOR </Label>
+        <InputField id="base" value={colors.base} onChange={setColorsFor('base')} />
+
+        <Label htmlFor="accent"> ACCENT COLOR </Label>
+        <InputField
+          id="accent"
+          value={colors.accent}
+          onChange={setColorsFor('accent')}
+        />
+        <Label htmlFor="textDefault"> TEXT COLOR </Label>
+        <InputField
+          id="textDefault"
+          value={colors.textDefault}
+          onChange={setColorsFor('textDefault')}
+        />
+      </Container>
       <BtnBar>
         <BtnWrapper>
           <GroBtn ariaLabel="Apply Prefs" id="applyPrefs" onClick={apply}>

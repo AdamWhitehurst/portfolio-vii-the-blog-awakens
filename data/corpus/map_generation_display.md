@@ -2,6 +2,7 @@
 title: Map Generation Display
 date: 2020-12-06T01:39:51.095Z
 category: 'Rust'
+article: true
 template: 'post'
 description: 'Displaying Roguie map generation in debug mode'
 image: roguies.png

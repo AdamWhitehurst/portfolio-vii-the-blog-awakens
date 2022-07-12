@@ -1,34 +1,35 @@
 ---
-
 date: 2021-03-25T09:37:57-07:00
 article: false
 tags:
   - '#periodic'
   - '#daily'
-  
 ---
 
 ## Day-Setting
+
 **Persona:** Schemer
 **Gratitude:** Keyboard clickiness and typing ability 😁
 **Mission:** Tasks
 **Focus:** Tasks
 
 ## Habits
+
 - [x] Check Plants
 - [x] Check Portfolio
 
 ## Tasks
- - [x] Journal
- - [x] Check / Pull Weekly Tasks
- - [ ] Meet w/ AJ: Deal Type applet, etc.
- - [ ] Josh W Comeau CSS Module 1 up to workshop [[daily_note_2021_03_22#^task-vxuo|< Origin]]
- - [ ] MeetKevin Stocks & Psychology Watercooler Investing [[daily_note_2021_03_22#^task-px7e|< Origin]]
- - [ ] Outline Life OS Obsidian System Article [[daily_note_2021_03_24#^task-ww72|< Origin]]
+
+- [x] Journal
+- [x] Check / Pull Weekly Tasks
+- [ ] Meet w/ AJ: Deal Type applet, etc.
+- [ ] Josh W Comeau CSS Module 1 up to workshop [[daily_note_2021_03_22#^task-vxuo|< Origin]]
+- [ ] MeetKevin Stocks & Psychology Watercooler Investing [[daily_note_2021_03_22#^task-px7e|< Origin]]
+- [ ] Outline Life OS Obsidian System Article [[daily_note_2021_03_24#^task-ww72|< Origin]]
 
 ## Journal
 
-Yesterday was not the *best* start, but it was a start at the very least. Today I just keep at it. Check those things off and keep moving.
+Yesterday was not the _best_ start, but it was a start at the very least. Today I just keep at it. Check those things off and keep moving.
 
 I'm mostly disappointed that I let myself get so distracted. I mean, I absolutely forgot about my blood test! Aww jeez. Moreover, I did nothing productive. When that happens, I just feel trapped. I like to be productive, but when I feel trapped my motivation slumps, which less to even less productivity.
 
@@ -44,4 +45,5 @@ Going forward, if I simply give up because the first day of my system didn't go 
 I will ponder this and find other things as well.
 
 ## Extra Credit
+
 - Added 'Reflection' section to weekly note

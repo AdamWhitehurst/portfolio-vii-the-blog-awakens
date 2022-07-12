@@ -2,6 +2,7 @@
 title: Sane Jest Mock Defaults
 date: 2020-12-10T19:22:32.810Z
 category: 'Testing'
+article: true
 template: 'post'
 description: 'Writing sane default mocks for jest modules'
 image: js.png

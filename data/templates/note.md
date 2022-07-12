@@ -1,14 +1,12 @@
 ---
-
 title: 'Title'
-date: {{date}}
+date: { { date } }
 category: ''
 template: 'post'
 description: 'tagline'
-image: 
+image:
 caption:
 article: false
 tags:
   - '#tag'
-  
 ---

@@ -5,8 +5,7 @@ import RowBx from '@components/RowBox'
 import React from 'react'
 import styled from 'styled-components'
 /* eslint-disable-next-line */
-  import('@wasm/roguie_bg.wasm').then((wasm) => wasm && wasm.__wbindgen_start())
-
+import('@wasm/roguie_bg.wasm').then((wasm) => wasm && wasm.__wbindgen_start())
 
 export const WASMCanvas = styled.canvas`
   width: 640px;

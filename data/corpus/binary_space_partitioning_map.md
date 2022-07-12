@@ -2,6 +2,7 @@
 title: Binary Space Partitioning Map
 date: 2020-12-07T21:01:46.163Z
 category: 'Rust'
+article: true
 template: 'post'
 description: 'Map generation using Binary Space Partitioning'
 image: roguies.png

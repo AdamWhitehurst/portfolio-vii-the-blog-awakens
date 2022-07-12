@@ -2,6 +2,7 @@
 title: Making Refactoring Look Regexy
 date: 2020-12-06T02:13:20.309Z
 category: 'JavaScript'
+article: true
 template: 'post'
 description: 'Using regex to do a large refactor in one click'
 image: js.png
